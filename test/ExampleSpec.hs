@@ -13,9 +13,14 @@ spec = describe "Example tests" $ do
 
   describe "myFunction" $ do
 
-     fromHUnitTest $ testDejafu "no deadlock" deadlocksNever myFunction
-     fromHUnitTest $ testDejafu "no exception" exceptionsNever myFunction
-     fromHUnitTest $ testDejafu "non determinism sadly :(" notAlwaysSame myFunction
+     fromHUnitTest $ testDejafu "no deadlock" deadlocksNever nonDeterministic
+     fromHUnitTest $ testDejafu "no exception" exceptionsNever nonDeterministic
+     fromHUnitTest $ testDejafu "non determinism sadly :(" notAlwaysSame nonDeterministic
 
+     fromHUnitTest $ testDejafu "no deadlock" deadlocksNever deterministic
+     fromHUnitTest $ testDejafu "no exception" exceptionsNever deterministic
+     fromHUnitTest $ testDejafu "determinism" alwaysSame deterministic
+
+     fromHUnitTest $ testDejafu "deadlock" deadlocksAlways deadlocking
   --describe "myFunction autotest" $ do
        --fromHUnitTest $ testAuto myFunction
