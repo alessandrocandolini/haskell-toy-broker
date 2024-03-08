@@ -1,0 +1,14 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "haskell-toy-broker:lib"
+
+    - path: "./app/Main.hs"
+      component: "haskell-toy-broker:exe:haskell-toy-broker-exe"
+
+    - path: "./app/Paths_haskell-toy-broker.hs"
+      component: "haskell-toy-broker:exe:haskell-toy-broker-exe"
+
+    - path: "./test"
+      component: "haskell-toy-broker:test:haskell-toy-broker-test"
+
