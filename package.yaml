@@ -52,6 +52,7 @@ tests:
     - haskell-toy-broker
     - hspec
     - hspec-discover
+    - hspec-contrib
     - QuickCheck
     - hunit-dejafu
 
