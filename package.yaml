@@ -14,7 +14,7 @@ dependencies:
 - neat-interpolation
 - stm
 - concurrency
-- dejafu
+- time
 
 default-extensions:
 - OverloadedStrings
@@ -54,6 +54,7 @@ tests:
     - hspec-discover
     - hspec-contrib
     - QuickCheck
+    - dejafu
     - hunit-dejafu
 
 verbatim:
