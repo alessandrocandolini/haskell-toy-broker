@@ -21,7 +21,8 @@ spec = describe "Example tests" $ do
      fromHUnitTest $ testDejafu "no exception" exceptionsNever deterministic
      fromHUnitTest $ testDejafu "determinism" alwaysSame deterministic
 
-     fromHUnitTest $ testDejafu "deadlock" deadlocksAlways deadlocking
+     fromHUnitTest $ testDejafu "deadlock" deadlocksAlways alwaysDeadlocking
+     fromHUnitTest $ testDejafu "deadlock" deadlocksSometimes sometimesDeadlocking
 
   --describe "nonDeterministic autotest" $ do
-       --fromHUnitTest $ testAuto nonDeterministic
+       --fromHUnitTest $ testAuto sometimesDeadlocking
